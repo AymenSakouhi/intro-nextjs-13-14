@@ -48,3 +48,10 @@ The difference is that you don't need now the page.tsx in the parent folder, you
 
 \_css is a private route that you can't access it directly, you can only access it through the \_app.tsx file
 
+## Server Side Rendering + async data fetching
+
+you can fetch data using async await with functions in SSC and then you can pass the data to the component and it will be rendered on the server side and then it will be sent to the client side.
+
+## Client components
+
+Anything that does not need to be rendered on the server side, you can put it in the client components and it will be rendered on the client side. Usually when there is an interaction with the user, you need to use client components.
