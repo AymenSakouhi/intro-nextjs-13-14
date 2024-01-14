@@ -43,3 +43,8 @@ then you will be able to access the params in the page.tsx file as params.id[0] 
 if you have a route like this: /hi/there/you
 and you have a folder called [...[id]] without the page.tsx page in it but a child folder and it is:
 The difference is that you don't need now the page.tsx in the parent folder, you can have it in the child folder and it will work.
+
+## private routes
+
+\_css is a private route that you can't access it directly, you can only access it through the \_app.tsx file
+
