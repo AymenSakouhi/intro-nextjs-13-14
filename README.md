@@ -12,23 +12,20 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stuff I learned,
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NextJs does every component as SSR component, you can test that with console.log(process.argv) as in the beginning of the components
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Routing
 
-## Learn More
+Whenever we are working on routes that contains ID, rather use for example this way:
+[id]/[title] as folders and then put the component page
+which means that we end up with localhost:3000/hi/there and your params will be in a prop called {params} where you can get the params.id and params.title from it.
+[...id] after whatever segment you put a folder like that, you will be able to chain routes and it will work.
+if you are doing this:
+[[...id]] means the original parent route needs to have no page.tsx and it will always go inside the id folder to get its page and visualize it
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Rendering
+Statically or Dynamically
+Statically ahead of time and the results are cached.
+Dynamically with a param in it and i don't wanna cache it so I leave it dynamic.
